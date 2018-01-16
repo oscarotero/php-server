@@ -66,7 +66,7 @@ module.exports = class PHPServer {
             return new Promise((resolve, reject) => {
                 try {
                     checkServer(this.host, this.port, () => {
-                        resolve()
+                        resolve(this.process)
                     })
                 } catch (e) {
                     reject(e)
